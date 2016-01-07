@@ -1,7 +1,12 @@
-# Calculate My Paycheck
+# calculate-my-paycheck
 
-Android app for calculating paychecks based on hourly rate and hours worked. 
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.15.1.
 
-## Development
+## Build & development
 
-Built with [Cordova](https://cordova.apache.org/), [Angular](https://angularjs.org), and [Angular Material](https://material.angularjs.org).
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
