@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate My Paycheck</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/ionic.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/ionic.css">
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body ng-app="ionic" onload='pageLoad()'>
+	
+	
+
+	<ion-header-bar align-title="center" class="bar-balanced" id="header">
+	  <img class="title" id="cashLogo" src="cashlogo.png" style="left:0;right:0;"/>
+		<div class="buttons" id="settingsButton"><button class="button button-outline button-balanced icon ion-ios7-gear-outline" style="color:#FFFFFF;border-color:#FFFFFF;width:100px;"></button></div>
+	</ion-header-bar>
+	<ion-content overflow-scroll="false" id="main">
+		<div class="list list-inset" id="content">
+		  <div class="item item-divider cardHead2" id="calcButton">Calculate<div style="float:right;padding-right:10px;"><i class="icon ion-refresh"></i></div></div>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Hourly Wage</span>
+		    <input type="text" placeholder="Rate" id="hoursWage" style="text-align:right;">
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Hours Worked</span>
+		    <input type="text" placeholder="Hours" id="hoursWorked">
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Pay Before Deductions</span>
+		    <div style="color:#009321;" id="totalPay">$0.00</div>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Taxes</span>
+		    <div style="color:#BF0000;" id="taxForm">$0.00</div>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Retirement</span>
+		    <div style="color:#BF0000;" id="retireForm">$0.00</div>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Other Deductions</span>
+		    <div style="color:#BF0000;" id="miscForm">$0.00</div>
+		  </label>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Pay After Deductions</span>
+		    <div style="color:#009321;" id="endTotal">$0.00</div>
+		  </label>
+		</div>
+
+		<div class="list list-inset" id="settings">
+		  <div class="item item-divider cardHead2" id="calcButton">Settings<div style="float:right;padding-right:10px;"><i class="icon ion-ios7-gear-outline"></i></div></div>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Federal Tax (%)</span>
+		    <input type="text" placeholder="Rate" id="fedRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">State Tax (%)</span>
+		    <input type="text" placeholder="Hours" id="stateRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Local Tax (%)</span>
+		    <input type="text" placeholder="Hours" id="localRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Medicare Tax (%)</span>
+		    <input type="text" placeholder="Hours" id="medRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Social Security (%)</span>
+		    <input type="text" placeholder="Hours" id="ssRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Retirement (%)</span>
+		    <input type="text" placeholder="Hours" id="retireRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Other Deduction (%)</span>
+		    <input type="text" placeholder="Hours" id="otherRate">
+		  </label>
+		  <label class="item item-input item-stacked-label" id="settings2">
+		    <span class="input-label">Other Deduction ($)</span>
+		    <input type="text" placeholder="Hours" id="otherAm">
+		  </label>
+		</div>
+	</ion-content>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
+
+<!--
+<div class="bar bar-header bar-balanced" id="header" style="font-size:50px;">
+		<img class="title" id="cashLogo" src="cashlogo.png"/>
+		<div class="buttons" id="settingsButton"><button class="button button-outline button-balanced icon ion-ios7-gear-outline" style="color:#FFFFFF;border-color:#FFFFFF;width:100px;"></button></div>
+	</div>
+	<div class="content">
+	HELLO
+	</div>
+
+<div data-role="stuff" data-theme="d" id="stuff" >
+
+		<div id="header"><div id="settingsButton"><img src="settingsicon.png" id="settingsIcon" /></div></div>
+
+		<div id="content">
+			<div class="vertAlign">Hourly Rate<div class="contentText"><input type="number" class="inputForm" id="hoursWage"></input></div></div>
+			<div class="vertAlign">Hours Worked<div class="contentText"><input type="number" class="inputForm" id="hoursWorked"></input></div></div>
+			<div class="vertAlign">Pay Before Deductions<div class="contentText" style="color:#009321;" id="totalPay">$0.00</div></div>
+			<div class="vertAlign">Taxes<div class="contentText" style="color:#BF0000;" id="taxForm">$0.00</div></div>
+			<div class="vertAlign">Retirement<div class="contentText" style="color:#BF0000;" id="retireForm">$0.00</div></div>
+			<div class="vertAlign">Other Deductions<div class="contentText" style="color:#BF0000;" id="miscForm">$0.00</div></div>
+			<div class="vertAlign">Pay After Deductions<div class="contentText" style="color:#009321;" id="endTotal">$0.00</div></div>
+
+			<div id="calcDiv"><div id="calcButton">Calculate</div></div>
+		</div>
+
+		<div id="settings">
+			<div class="vertAlign">Federal Tax (Percent)<div class="contentText"><input type="number" class="inputForm" id="fedRate"></input></div></div>
+			<div class="vertAlign">State Tax (Percent)<div class="contentText"><input type="number" class="inputForm" id="stateRate"></input></div></div>
+			<div class="vertAlign">Local Tax (Percent)<div class="contentText"><input type="number" class="inputForm" id="localRate"></input></div></div>
+			<div class="vertAlign">Medicare Tax (Percent)<div class="contentText"><input type="number" class="inputForm" id="medRate"></input></div></div>
+			<div class="vertAlign">Social Security Tax (Percent)<div class="contentText"><input type="number" class="inputForm" id="ssRate"></input></div></div>
+			<div class="vertAlign">Retirement (Percent)<div class="contentText"><input type="number" class="inputForm" id="retireRate"></input></div></div>
+			<div class="vertAlign">Other (Percent)<div class="contentText"><input type="number" class="inputForm" id="otherRate"></input></div></div>
+			<div class="vertAlign">Other (Amount)<div class="contentText"><input type="number" class="inputForm" id="otherAm"></input></div></div>
+		</div>
+
+		
+
+	</div>
+-->
