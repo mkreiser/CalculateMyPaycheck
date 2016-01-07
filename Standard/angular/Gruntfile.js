@@ -9,6 +9,8 @@
 
 module.exports = function (grunt) {
 
+  grunt.loadNpmTasks('grunt-karma-coveralls');
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -451,9 +453,14 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    coveralls: {
+      options: {
+        coverageDir: 'coverage/PhantomJS 1.9.8 (Windows 8 0.0.0)/lcov.info'
+      }
     }
   });
-
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -508,4 +515,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+
 };
