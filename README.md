@@ -1,4 +1,4 @@
-# calculate-my-paycheck [![Build Status](https://travis-ci.org/mkreiser/CalculateMyPaycheck.svg?branch=master)](https://travis-ci.org/mkreiser/CalculateMyPaycheck)
+# calculate-my-paycheck [![Build Status](https://travis-ci.org/mkreiser/CalculateMyPaycheck.svg?branch=master)](https://travis-ci.org/mkreiser/CalculateMyPaycheck) [![Coverage Status](https://coveralls.io/repos/mkreiser/CalculateMyPaycheck/badge.svg?branch=master&service=github)](https://coveralls.io/github/mkreiser/CalculateMyPaycheck?branch=master)
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
