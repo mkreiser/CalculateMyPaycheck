@@ -13,7 +13,5 @@ before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
   - 'npm install'
-after_script:
-  - 'ls ./coverage'
 after_success:
   - npm run coveralls
