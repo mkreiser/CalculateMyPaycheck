@@ -16,5 +16,5 @@ before_script:
 after_script:
   - 'cat ./coverage/**/lcov.info > lcov.info'
   - 'node node_modules/lcov-filter/index.js lcov.info config | ./node_modules/coveralls/bin/coveralls.js'
-  - 'ls'
-  - 'echo lcov.info'
+  - 'ls ./coverage'
+  - 'cat lcov.info'
