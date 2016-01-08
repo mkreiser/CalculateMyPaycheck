@@ -1,5 +1,5 @@
 TN:
-SF:C:\Users\swurve\Documents\GitHub\CalculateMyPaycheck\Standard\angular\node_modules\karma-jasmine\lib\boot.js
+SF:C:\Users\swurve\Documents\GitHub\CalculateMyPaycheck\node_modules\karma-jasmine\lib\boot.js
 FN:6,(anonymous_1)
 FNF:1
 FNH:1
@@ -24,7 +24,7 @@ BRF:4
 BRH:2
 end_of_record
 TN:
-SF:C:\Users\swurve\Documents\GitHub\CalculateMyPaycheck\Standard\angular\node_modules\karma-jasmine\lib\adapter.js
+SF:C:\Users\swurve\Documents\GitHub\CalculateMyPaycheck\node_modules\karma-jasmine\lib\adapter.js
 FN:1,(anonymous_1)
 FN:11,isExternalStackEntry
 FN:24,getRelevantStackFrom
