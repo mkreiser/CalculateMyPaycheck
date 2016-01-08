@@ -14,5 +14,5 @@ before_script:
   - 'bower install'
   - 'npm install'
 after_script:
-  - 'cat ./**/lcov.info > lcov.info'
+  - 'cat coverage/**/lcov.info > lcov.info'
   - 'cat lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage'
