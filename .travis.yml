@@ -14,5 +14,5 @@ before_script:
   - 'bower install'
   - 'npm install'
 after_script:
-  - 'cat ./coverage/PhantomJS 1.9.8 (Windows 8 0.0.0)/lcov.info > lcov.info'
+  - 'cat ./coverage/**/lcov.info > lcov.info'
   - 'node node_modules/lcov-filter/index.js lcov.info config | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage'
