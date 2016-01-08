@@ -71,7 +71,7 @@ module.exports = function(config) {
     },
     coverageReporter: {
         type: "lcov",
-        dir: "coverage/"
+        dir: "coverage"
     },
 
     // Continuous Integration mode
