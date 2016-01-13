@@ -16,33 +16,12 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="calculateMyPaycheckApp" ng-controller="appCtrl">
+  <body ng-app="calculateMyPaycheckApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-icon md-svg-src="images/cash-icon.svg" class="md-48"></md-icon>
-        <span flex></span>
-        <md-button class="md-raised">Go Pro</md-button>
-      </div>
-    </md-toolbar>
-    <md-content>
-      <md-card class="padded-card">
-        <md-input-container>
-          <label>Hourly rate</label>
-          <input ng-model="rate" type="number" min="0">
-        </md-input-container>
-        <md-input-container class="bottom-input">
-          <label>Hours worked</label>
-          <input ng-model="hours" type="number" min="0">
-        </md-input-container>
-      </md-card>
-      <md-card class="padded-card text-center">
-        <span class="md-display-2">{{ result | currency }}</span>
-      </md-card>
-    </md-content>
+    <ng-view></ng-view>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -51,7 +30,7 @@
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-53247724-6');
        ga('send', 'pageview');
     </script>
 

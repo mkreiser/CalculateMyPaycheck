@@ -1,0 +1,22 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-icon md-svg-src="images/cash-icon.svg" class="md-48"></md-icon>
+    <span flex></span>
+    <md-button class="md-raised">Go Pro</md-button>
+  </div>
+</md-toolbar>
+<md-content>
+  <md-card class="padded-card">
+    <md-input-container>
+      <label>Hourly rate</label>
+      <input ng-model="rate" type="number" min="0">
+    </md-input-container>
+    <md-input-container class="bottom-input">
+      <label>Hours worked</label>
+      <input ng-model="hours" type="number" min="0">
+    </md-input-container>
+  </md-card>
+  <md-card class="padded-card text-center">
+    <span class="md-display-2">{{ result | currency }}</span>
+  </md-card>
+</md-content>

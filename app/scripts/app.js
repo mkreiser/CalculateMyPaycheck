@@ -18,6 +18,16 @@ angular
   'ngRoute',
   'ngSanitize'
 ])
+.config(function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/app.html',
+      controller: 'appCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+})
 .controller('appCtrl', function($scope) {
 
   $scope.result = 0;
